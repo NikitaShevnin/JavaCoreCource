@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="java-core:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_core_jar</output-path>
+    <root id="archive" name="java-core.jar">
+      <element id="module-output" name="java-core" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
