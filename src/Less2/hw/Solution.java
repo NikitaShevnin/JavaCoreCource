@@ -116,9 +116,12 @@ public class Solution {
         return true;
     }
 
-    /*
-    Метод проверки победителя, проверка производется рекурсивно
-    с помощью вызова вспомогательных методов
+    /**
+     * Метод checkWin проверяет все возможные линии наличия победителя на игровом поле.
+     * Он вызывает метод checkLine для каждой линии (горизонтальной, вертикальной и двух
+     * диагональных) и возвращает true, если находит линию из четырех символов dot.
+     * @param dot это символ который в дальнешем проходит проверку победителя
+     * @return
      */
     private static boolean checkWin(char dot) {
         for (int i = 0; i < fieldSizeY; i++) {
@@ -135,13 +138,19 @@ public class Solution {
         }
         return false; // Нет победителя
     }
-    private static void printWinnerName(char winner) {
-        if (winner == DOT_HUMAN)
-            System.out.println("Победил человек!");
-        else if (winner == DOT_AI)
-            System.out.println("Победил компьютер!");
-    }
 
+    /**
+     * проверяет все возможные линии наличия победителя на игровом поле.
+     * @param dot символ, который надо проверить в линии. В данном случае,
+     *            это символ игрока или компьютера (человек или компьютер),
+     *            переданный в метод checkWin.
+     * @param startY,startX начальные координаты, от которых начинается проверка линии.
+     *                      Эти координаты указывают на позицию поля, где находится
+     *                      первый символ в линии.
+     * @param dirY,dirX направление проверки линии. Эти значения определяют, как
+     *                  изменяются координаты по Y и X при переходе к следующему символу в линии.
+     * @return
+     */
     private static boolean checkLine(char dot, int startY, int startX, int dirY, int dirX) {
         int endY = startY + (WIN_COUNT - 1) * dirY;
         int endX = startX + (WIN_COUNT - 1) * dirX;
