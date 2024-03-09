@@ -1,7 +1,7 @@
-package less4.hw;
+package Less4.hw;
 
-import static less4.hw.Account.displayBalance;
-import static less4.hw.Account.getUserInput;
+import static Less4.hw.Account.displayBalance;
+import static Less4.hw.Account.getUserInput;
 
 public class Main {
     public static void main(String[] args) {

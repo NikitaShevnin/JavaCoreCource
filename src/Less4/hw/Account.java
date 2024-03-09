@@ -1,4 +1,4 @@
-package less4.hw;
+package Less4.hw;
 
 import java.util.Scanner;
 

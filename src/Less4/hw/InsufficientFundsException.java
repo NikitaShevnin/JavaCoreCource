@@ -1,4 +1,4 @@
-package less4.hw;
+package Less4.hw;
 
 public class InsufficientFundsException extends Exception {
     private double balance;
